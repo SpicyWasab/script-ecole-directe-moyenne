@@ -1,0 +1,17 @@
+{
+  "name": "ecole-directe-moyenne",
+  "version": "1.0.0",
+  "description": "Un script pour calculer sa moyenne à partir d'EcoleDirecte",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.2.0",
+    "ora": "^6.1.0",
+    "prompt-promise": "^1.0.3"
+  }
+}
