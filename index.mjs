@@ -31,7 +31,7 @@ const loginRes = await fetch('https://api.ecoledirecte.com/v3/login.awp', {
 const { code: loginResCode, token, message, data } = await loginRes.json();
 
 // code != 200 (fail) -> panic with message
-if(loginCode != 200) panic(message, loginSpinner);
+if(loginResCode != 200) panic(message, loginSpinner);
 
 // otherwise, get the firstname, lastname and id
 const { prenom: firstName, nom: lastName, id } = data.accounts[0];
@@ -138,8 +138,8 @@ for(const subject in subjectsNotes) {
     // calculate the average
     const average = sumOfNotes / sumOfCoefs * over;
     
-    displayedMoyennes[matiere] = moyenne.toFixed(precision);
-    moyenneGenerale += moyenne;
+    displayedAverages[subject] = average.toFixed(precision);
+    overallAverage += average;
     i++;
 }
 
