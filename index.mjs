@@ -71,7 +71,7 @@ const availablePeriods = [...(new Set(notes.map(note => note.codePeriode)))];
 // display available periods
 console.table(availablePeriods);
 
-// ask for the period index (default is the last period, which is the current period (I think :thinking:))
+// ask for the period index (default is the last period, wich is the current period (I think :thinking:))
 const currentPeriodIndex = availablePeriods.length - 1;
 const verify = (value) => parseInt(index) < 0 || parseInt(index) >= availablePeriods.length;
 const periodIndex = await safePromptNumber('Veuillez entrer l\'index de la période (semestre, trimestres, etc ...) dont vous voulez obtenir les moyennes.', currentPeriodIndex, verify);
